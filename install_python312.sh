@@ -38,7 +38,6 @@ install_debian() {
     echo -e "[i]\tInstalling python3-setuptools..."
     sudo apt-get install -y python3-setuptools || { echo -e "[!]\tFailed to install python3-setuptools"; exit 1; }
 
-    echo -e "\n\n[i]\tPython 3.12, pip, venv, and setuptools have been installed.\n"
 }
 
 install_rhel() {
@@ -63,7 +62,6 @@ install_rhel() {
     sudo python3.12 -m pip install virtualenv || { echo -e "[!]\tFailed to install virtualenv"; exit 1; }
     check_command virtualenv
 
-    echo -e "\n\n[i]\tPython 3.12, pip, and virtualenv have been installed.\n\n"
 }
 
 # Detect system type and run appropriate function
